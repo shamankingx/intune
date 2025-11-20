@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitions revision="1.0" schemaVersion="1.0">
+  <policyNamespaces>
+    <target prefix="Google" namespace="Google.Policies" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <categories>
+    <category name="Cat_Google" displayName="$(string.Cat_Google)" />
+  </categories>
+</policyDefinitions>

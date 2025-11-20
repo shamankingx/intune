@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policyDefinitionResources revision="1.0" schemaVersion="1.0">
+  <displayName>Google Base Policy</displayName>
+  <description>Base policy for Google Applications</description>
+  <resources>
+    <stringTable>
+      <string id="Cat_Google">Google</string>
+    </stringTable>
+  </resources>
+</policyDefinitionResources>
