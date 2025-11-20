@@ -1,52 +1,52 @@
-ADMX Repository
+# ADMX Repository
 
-This repository stores Group Policy Administrative Templates (ADMX/ADML) for Windows, Microsoft 365, and third-party software.
-It is designed for environments using:
+This repository stores **Group Policy Administrative Templates (ADMX/ADML)** for Windows, Microsoft 365, and third-party applications.  
+It is designed to support:
 
-Microsoft Intune (Custom ADMX Upload)
+- Microsoft Intune (Custom ADMX Import)
+- Active Directory Group Policy (Central Store)
+- Local Group Policy Editor (gpedit.msc)
 
-Active Directory Group Policy Central Store
+---
 
-Local Group Policy Editor (gpedit.msc)
+## 📁 Repository Structure
 
-📁 Repository Structure
+Each vendor or product folder contains two subfolders:
 
-Your structure (per vendor folder):
 
 vendor-name/
-    ├── admx/
-    │     └── example.admx
-    └── adml/
-          └── example.adml
+├── admx/
+│ └── example.admx
+└── adml/
+└── example.adml
 
-
-Full example structure:
-
+Full example:
 ├── microsoft/
-│     ├── admx/
-│     └── adml/
+│ ├── admx/
+│ └── adml/
 ├── chrome/
-│     ├── admx/
-│     └── adml/
+│ ├── admx/
+│ └── adml/
 ├── firefox/
-│     ├── admx/
-│     └── adml/
+│ ├── admx/
+│ └── adml/
 ├── citrix/
-│     ├── admx/
-│     └── adml/
+│ ├── admx/
+│ └── adml/
 └── custom/
-      ├── admx/
-      └── adml/
+├── admx/
+└── adml/
 
-Folder Rules
 
-admx/ contains only .admx files
+**Rules:**
 
-adml/ contains only .adml files, usually in a language subfolder (e.g., en-US/, th-TH/)
+- `admx/` folder contains only `.admx` files  
+- `adml/` folder contains only `.adml` files (often inside `en-US/`, `th-TH/`, etc.)  
+- Each product or vendor is stored in a separate root folder  
 
-Each product or vendor has its own folder at the root level
+---
 
-📤 Uploading ADMX Files to Intune
+📤 Uploading ADMX Files to Microsoft Intune
 
 Go to Intune Admin Center
 
@@ -57,28 +57,28 @@ Upload:
 
 .admx files from vendor-name/admx/
 
-.adml files from vendor-name/adml/ (include language folder)
+.adml files from vendor-name/adml/ (include language subfolder if required)
 
-Once uploaded, Intune will allow creating configuration profiles using these templates.
+After uploading, you can create a configuration profile using the imported template.
 
 📚 Best Practices
 
-Keep all vendors separated at the root level
+Keep vendors separated at the root level
 
-Store ADMX and ADML files in their respective admx/ and adml/ folders
+Maintain consistent folder structure (admx/ and adml/)
 
-Use consistent commit messages, e.g.:
+Recommended commit examples:
 
 Update Chrome ADMX to version 131
 Fix Citrix Workspace ADMX using FixMyADMX
-Add custom ADMX for internal policy
+Add custom internal ADMX template
 
 
-Run FixMyADMX before uploading to Intune
+Always validate or fix templates before uploading to Intune
 
-Maintain a version history using a CHANGELOG.md
+Consider maintaining a CHANGELOG.md for tracking versions
 
-📄 License Notice
+📄 Licensing Notice
 
-Some ADMX templates are copyrighted by their respective vendors.
-Review vendor licensing conditions before redistribution.
+Some ADMX/ADML templates are copyrighted by their respective software vendors.
+Please review and comply with vendor licensing terms before redistributing files.
