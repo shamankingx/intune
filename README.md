@@ -14,28 +14,35 @@ It is designed to support:
 Each vendor or product folder contains two subfolders:
 
 
+Each vendor or product folder contains two subfolders:
+
+```
 vendor-name/
-├── admx/
-│ └── example.admx
-└── adml/
-└── example.adml
+    ├── admx/
+    │     └── example.admx
+    └── adml/
+          └── example.adml
+```
 
 Full example:
+
+```
 ├── microsoft/
-│ ├── admx/
-│ └── adml/
+│     ├── admx/
+│     └── adml/
 ├── chrome/
-│ ├── admx/
-│ └── adml/
+│     ├── admx/
+│     └── adml/
 ├── firefox/
-│ ├── admx/
-│ └── adml/
+│     ├── admx/
+│     └── adml/
 ├── citrix/
-│ ├── admx/
-│ └── adml/
+│     ├── admx/
+│     └── adml/
 └── custom/
-├── admx/
-└── adml/
+      ├── admx/
+      └── adml/
+```
 
 
 **Rules:**
